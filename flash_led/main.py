@@ -1,7 +1,7 @@
 
 
 from machine import Pin
-from utime import sleep
+#from utime import sleep
 import uasyncio
 
 
@@ -46,7 +46,7 @@ async def blink_led(delay):
 async def main():
     #task = uasyncio.create_task(blync(1000))
     #task = uasyncio.create_task(blink_led(1000))
-    task = uasyncio.gather(blink_led(250), blync(1000))
+    task = uasyncio.gather(blink_led(125), blync(1000))
     await task
 
 
